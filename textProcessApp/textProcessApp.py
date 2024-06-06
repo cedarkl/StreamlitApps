@@ -49,19 +49,19 @@ try:
        st.write(data.head())
        st.write(data.shape)
 
-       # @st.cache_data
-       # def convert_data(data):
-       #     return data.to_csv(index=False).encode('utf-8')
+       @st.cache_data
+       def convert_data(data):
+           return data.to_csv(index=False).encode('utf-8')
 
-       # data_csv = convert_data(data)
+       data_csv = convert_data(data)
 
-       # # with open("data_tranformed.csv") as f:
-       # #     st.download_button(label="Download Full CSV", data=f, mime='text/csv')
+       # with open("data_tranformed.csv") as f:
+       #     st.download_button(label="Download Full CSV", data=f, mime='text/csv')
 
-       # st.download_button("Download Full CSV", data_csv,
-       #                    "file.csv",
-       #                    "text/csv",
-       #                    key='download-csv')
+       st.download_button("Download Full CSV", data_csv,
+                          "file.csv",
+                          "text/csv",
+                          key='download-csv')
 
 except:
    st.write("Please load a file to continue...")
