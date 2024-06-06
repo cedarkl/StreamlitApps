@@ -29,9 +29,12 @@ try:
        # data['full_text'] = clean_data(data['full_text'])
        # st.write(data.head())
 
+       # Count the sentences of each text
+       data['sent_count'] = data['full_text'].map(lambda x: len(sent_tokenize(x)))
+
        def transform_data(data, text_col):  # text column of the data
-           # Count the sentences of each text
-           data['sent_count'] = text_col.apply(lambda x: len(sent_tokenize(x)))
+           # # Count the sentences of each text
+           # data['sent_count'] = text_col.map(lambda x: len(sent_tokenize(x)))
            text_col = clean_data(text_col)
 
            # Find the length of each text
