@@ -47,6 +47,7 @@ try:
        st.write(data.head())
        st.write(data.shape)
 
+       @st.experimental_memo
        def convert_data(data):
            return data.to_csv(index=False).encode('utf-8')
 
