@@ -1,10 +1,9 @@
 import streamlit as st
 import pandas as pd
 import string
-import nltk
-nltk.download('wordnet')
+#import nltk
 #nltk.download('punkt')
-from nltk.tokenize import sent_tokenize
+#from nltk.tokenize import sent_tokenize
 
 
 st.title("Text Process App")
