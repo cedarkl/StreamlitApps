@@ -1,8 +1,8 @@
 import streamlit as st
 import pandas as pd
 import string
-#nltk.download('punkt')
 import nltk
+nltk.download('punkt')
 from nltk.tokenize import sent_tokenize
 
 
