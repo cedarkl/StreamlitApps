@@ -9,7 +9,6 @@ st.write('''
 Let's transform your text data to clean-and-clear for training!
 ''')
 
-#uploaded_file = st.file_uploader("Choose a file", type=['csv'])
 try:
    uploaded_file = st.file_uploader("Choose a file", type=['csv'])
    if uploaded_file is not None:
