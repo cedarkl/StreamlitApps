@@ -48,7 +48,7 @@ try:
 
        data.to_csv("data_tranformed.csv", index=False)
 
-       with open("https://github.com/cedarkl/StreamlitApps/tree/main/textProcessApp/data_tranformed.csv") as f:
+       with open(r"https://github.com/cedarkl/StreamlitApps/tree/main/textProcessApp/data_tranformed.csv") as f:
            st.download_button(label="Download Full CSV", data=f, mime='text/csv')
 
 except:
