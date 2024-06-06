@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import string
 #nltk.download('punkt')
+import nltk
 from nltk.tokenize import sent_tokenize
 
 
