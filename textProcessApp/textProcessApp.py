@@ -4,7 +4,6 @@ import string
 #nltk.download('punkt')
 from nltk.tokenize import sent_tokenize
 
-
 st.title("Text Process App")
 st.write('''
 Let's transform your text data to clean-and-clear for training!
@@ -49,7 +48,7 @@ try:
 
        data.to_csv("data_tranformed.csv", index=False)
 
-       with open("data_tranformed.csv") as f:
+       with open("https://github.com/cedarkl/StreamlitApps/tree/main/textProcessApp/data_tranformed.csv") as f:
            st.download_button(label="Download Full CSV", data=f, mime='text/csv')
 
 except:
