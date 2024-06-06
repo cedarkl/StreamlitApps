@@ -4,7 +4,6 @@ import string
 #nltk.download('punkt')
 from nltk.tokenize import sent_tokenize
 
-
 st.title("Text Process App")
 st.write('''
 Let's transform your text data to clean-and-clear for training!
