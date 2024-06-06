@@ -25,27 +25,27 @@ try:
            text_col = text_col.map(lambda x: x.lower())
            return text_col
 
-       data['full_text'] = clean_data(data['full_text'])
-       st.write(data.head())
-
-       # def transform_data(data, text_col):  # text column of the data
-       #     # Count the sentences of each text
-       #     data['sent_count'] = text_col.map(lambda x: len(sent_tokenize(x)))
-       #     text_col = clean_data(text_col)
-
-       #     # Find the length of each text
-       #     data['char_count'] = text_col.str.len()
-       #     # Count the number of words in each text
-       #     data['word_count'] = text_col.str.split().str.len()
-       #     # Find the average length of word
-       #     data['average_word_length'] = data['char_count'] / data['word_count']
-       #     data['full_text_cleaned'] = text_col
-       #     data = data.drop(data.columns[[1]], axis=1)
-       #     return data
-
-       # data = transform_data(data, data['full_text'])
+       # data['full_text'] = clean_data(data['full_text'])
        # st.write(data.head())
-       # st.write(data.shape)
+
+       def transform_data(data, text_col):  # text column of the data
+           # Count the sentences of each text
+           data['sent_count'] = text_col.map(lambda x: len(sent_tokenize(x)))
+           text_col = clean_data(text_col)
+
+           # Find the length of each text
+           data['char_count'] = text_col.str.len()
+           # Count the number of words in each text
+           data['word_count'] = text_col.str.split().str.len()
+           # Find the average length of word
+           data['average_word_length'] = data['char_count'] / data['word_count']
+           data['full_text_cleaned'] = text_col
+           data = data.drop(data.columns[[1]], axis=1)
+           return data
+
+       data = transform_data(data, data['full_text'])
+       st.write(data.head())
+       st.write(data.shape)
 
        # @st.cache_data
        # def convert_data(data):
