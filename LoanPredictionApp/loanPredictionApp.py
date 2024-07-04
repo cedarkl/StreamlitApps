@@ -10,7 +10,7 @@ st.write('''
 Let's consider what condition can match yours!
 ''')
 
-train = pd.read_csv(https://raw.githubusercontent.com/cedarkl/StreamlitApps/main/LoanPredictionApp/train.csv)
+train = pd.read_csv('https://raw.githubusercontent.com/cedarkl/StreamlitApps/main/LoanPredictionApp/train.csv')
 train_sub = train[['ApplicantIncome', 'CoapplicantIncome', 'LoanAmount',
                    'Loan_Amount_Term', 'Credit_History']]
 train_sub = train_sub.dropna()
